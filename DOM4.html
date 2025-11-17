@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body style="background-color: #000; color: #fff;">
+    <ul class="languange">
+        <li>javascript</li>
+    </ul>
+
+    
+</body>
+<script>
+    // add
+    function addlanguage(langName) {
+        const li =document.createElement('li');
+        li.innerHTML=`${langName}`
+        document.querySelector('.languange').appendChild(li)
+
+
+    }
+    addlanguage('python')
+    addlanguage('java')
+    function addoptlangauge(langeName) {
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langeName))
+        document.querySelector('.languange').appendChild(li)
+    }
+    addoptlangauge('c++')
+
+    //edit 
+    const secondLang = document.querySelector('li:nth-child(2)')
+    console.log(secondLang);
+    // secondLang.innerHTML='priya'
+    
+    const newli= document.createElement('li')
+    newli.textContent='priya'
+    secondLang.replaceWith(newli)
+
+    //3
+    const firstlang= document.querySelector("li:first-child")
+    firstlang.outerHTML='<li>python</li>'
+
+    //remove
+
+   const removlang= document.querySelector('li:last-child')
+    removlang.remove()
+
+
+
+
+</script>
+</html>
